@@ -1,0 +1,85 @@
+[
+    {
+        "keys": [
+            "ctrl+q"
+        ],
+        "command": "cancel_build"
+    },
+    {
+        "keys": [
+            "ctrl+`"
+        ],
+        "command": "GolangBuildCancelCommand"
+    },
+    {
+        "keys": [
+            "ctrl+b"
+        ],
+        "command": "rebuild"
+    },
+    {
+        "keys": [
+            "f1"
+        ],
+        "command": "toggle_panel",
+        "args": {
+            "panel": "output.exec"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+shift+w"
+        ],
+        "command": ""
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "ctrl+down"
+        ],
+        "command": ""
+    },
+    {
+        "keys": [
+            "ctrl+f4"
+        ],
+        "command": ""
+    },
+    {
+        "keys": [
+            "ctrl+w"
+        ],
+        "command": ""
+    },
+    {
+        "keys": [
+            "ctrl+;"
+        ],
+        "command": ""
+    },
+    {
+        "keys": [
+            "insert"
+        ],
+        "command": "noop"
+    },
+    {
+        "keys": [
+            ","
+        ],
+        "command": ""
+    },
+    // Emmet: Wrap with Abbreviation
+    {
+        "keys": [
+            "shift+ctrl+g"
+        ],
+        "command": "emmet_wrap_with_abbreviation",
+        "context": [
+            {
+                "key": "setting.is_widget",
+                "operand": false
+            }
+        ]
+    },
+]

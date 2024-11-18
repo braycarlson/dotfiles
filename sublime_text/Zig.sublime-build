@@ -1,0 +1,19 @@
+{
+    "target": "zig",
+    "selector": "source.zig",
+    "cancel": {"kill": true},
+    "variants": [
+        {
+            "name": "Cmder",
+            "shell": "cmder",
+        },
+        {
+            "name": "Alacritty",
+            "shell": "alacritty",
+        },
+        {
+            "name": "Command Prompt",
+            "shell": "commandprompt",
+        }
+    ]
+}

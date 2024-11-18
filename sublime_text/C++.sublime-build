@@ -1,0 +1,44 @@
+{
+    "target": "cpp",
+    "version": 11,
+    "selector": "source.c++, source.cpp, source.cc, source.cxx, source.hpp",
+    "cancel": {"kill": true},
+    "variants": [
+        {
+            "name": "11 - Cmder",
+            "shell": "cmder",
+            "version": 11
+        },
+        {
+            "name": "11 - Alacritty",
+            "shell": "alacritty",
+            "version": 11
+        },
+        {
+            "name": "11 - Command Prompt",
+            "shell": "commandprompt",
+            "version": 11
+        },
+
+        {
+            "name": "17 - Cmder",
+            "shell": "cmder",
+            "version": 17
+        },
+        {
+            "name": "17 - Alacritty",
+            "shell": "alacritty",
+            "version": 17
+        },
+        {
+            "name": "17 - Command Prompt",
+            "shell": "commandprompt",
+            "version": 17
+        },
+        {
+            "name": "Qt5",
+            "project": "qt5",
+            "shell": null
+        },
+    ]
+}

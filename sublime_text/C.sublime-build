@@ -1,0 +1,20 @@
+{
+    "target": "c",
+    "version": 11,
+    "selector": "source.c",
+    "cancel": {"kill": true},
+    "variants": [
+        {
+            "name": "11 - Cmder",
+            "shell": "cmder",
+        },
+        {
+            "name": "11 - Alacritty",
+            "shell": "alacritty",
+        },
+        {
+            "name": "11 - Command Prompt",
+            "shell": "commandprompt",
+        }
+    ]
+}

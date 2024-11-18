@@ -1,0 +1,19 @@
+{
+    "target": "go",
+    "selector": "source.go",
+    "cancel": {"kill": true},
+    "variants": [
+        {
+            "name": "Cmder",
+            "shell": "cmder",
+        },
+        {
+            "name": "Alacritty",
+            "shell": "alacritty",
+        },
+        {
+            "name": "Command Prompt",
+            "shell": "commandprompt",
+        }
+    ]
+}
