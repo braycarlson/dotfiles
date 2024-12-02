@@ -8,21 +8,18 @@
     "show_diagnostics_severity_level": 3,
     "diagnostics_panel_include_severity_level": 3,
     "clients": {
-        "pyright": {
-            "enabled": true,
-        },
         "slint": {
             "command": [
                 "C:/Users/Brayden/.cargo/bin/slint-lsp.exe"
             ],
-            "languageId": "slint",
+            "selector": "slint",
             "scopes": [
                 "source.slint"
             ],
             "syntaxes": [
                 "Packages/User/Slint.sublime-syntax"
             ],
-            "enabled": true,
-        },
-    },
+            "enabled": true
+        }
+    }
 }

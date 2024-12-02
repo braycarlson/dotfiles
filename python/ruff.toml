@@ -1,0 +1,140 @@
+# Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
+select = ["ALL"]
+
+# Ignore specific rules
+ignore = [
+    "ANN002",
+    "ANN003",
+    "ANN101",
+    "ANN204",
+    "C901",
+    "COM812",
+    "BLE001",
+    "A003",
+    "D104",
+    "D106",
+    "D202",
+    "D205",
+    "D212",
+    "D213",
+    "D400",
+    "D406",
+    "D407",
+    "D415",
+    "G004",
+    "I001",
+    "INP001",
+    "PLR0915",
+    "Q000",
+    "S311",
+    "SLF001",
+    "T201",
+
+    # Unsure
+    "PTH123",
+    "PT019",
+    "FBT001",
+    "FBT002",
+    "S603",
+    "UP015",
+    "UP035",
+
+    # Temporary
+    "ANN401",
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D105",
+    "D107",
+    "D401",
+    "D417",
+    "ERA001",
+    "PLR2004",
+    "PLR0913",
+    "PLW2901",
+    "S301"
+]
+
+# Allow autofix for all enabled rules (when `--fix` is provided).
+fixable = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
+unfixable = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    "/site",
+    ".DS_Store",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".hypothesis",
+    ".idea",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pybuilder",
+    ".pytest_cache",
+    ".pyre",
+    ".pytype",
+    ".ropeproject",
+    ".scrapy",
+    ".svn",
+    ".tox",
+    ".webassets-cache",
+    "CVS",
+    "ENV",
+    "__pycache__",
+    "__pypackages__",
+    "build",
+    "cover",
+    "develop-eggs",
+    "dist",
+    "docs/_build",
+    "downloads",
+    "eggs",
+    "env",
+    "env.bak",
+    "htmlcov",
+    "instance",
+    "lib",
+    "lib64",
+    "node_modules",
+    "parts",
+    "profile_default",
+    "sdist",
+    "share/python-wheels",
+    "target",
+    "tmp/cache",
+    "var",
+    ".venv",
+    ".venv_win",
+    ".venv_windows",
+    ".venv_unix",
+    ".venv_linux",
+    ".venv_mac",
+    "venv",
+    "venv_win",
+    "venv_windows",
+    "venv_unix",
+    "venv_linux",
+    "venv_mac",
+    "venv.bak",
+    "wheels",
+    "personal/thesis/dataset/"
+]
+
+# Set per-file ignores (empty by default).
+per-file-ignores = {}
+
+# Match Black's line length.
+line-length = 88
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Assume Python 3.11.
+target-version = "py311"
+
+# Set the maximum McCabe complexity.
+[ruff.mccabe]
+max-complexity = 10

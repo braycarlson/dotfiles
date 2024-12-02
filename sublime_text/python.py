@@ -12,9 +12,24 @@ class Python(Build):
         super().__init__(window)
 
     def walk(self, file: Path) -> Path:
+        directories = [
+            '.venv',
+            '.venv_win',
+            '.venv_windows',
+            '.venv_unix',
+            '.venv_linux',
+            '.venv_mac',
+            'venv',
+            'venv_win',
+            'venv_windows',
+            'venv_unix',
+            'venv_linux',
+            'venv_mac',
+        ]
+
         for parent in [file, *file.parents]:
             if parent.is_dir():
-                for directory in ['.venv', 'venv']:
+                for directory in directories:
                     path = parent.joinpath(directory)
 
                     if path.exists() and path.is_dir():
