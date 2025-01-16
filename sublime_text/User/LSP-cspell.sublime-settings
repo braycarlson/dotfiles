@@ -1,0 +1,18 @@
+// Settings in here override those in "LSP-cspell/LSP-cspell.sublime-settings"
+
+{
+    "cSpell.enabledLanguageIds": [
+        "css",
+        "html",
+        "json",
+        "latex",
+        "less",
+        "markdown",
+        "plaintext",
+        // "python",
+        "restructuredtext",
+        "text",
+        "yaml",
+        "yml"
+    ],
+}

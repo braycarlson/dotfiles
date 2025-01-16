@@ -1,0 +1,19 @@
+{
+    "target": "racket",
+    "selector": "source.racket, source.rkt, source.scheme",
+    "cancel": {"kill": true},
+    "variants": [
+        {
+            "name": "Cmder",
+            "shell": "cmder",
+        },
+        {
+            "name": "Alacritty",
+            "shell": "alacritty",
+        },
+        {
+            "name": "Command Prompt",
+            "shell": "commandprompt",
+        }
+    ]
+}

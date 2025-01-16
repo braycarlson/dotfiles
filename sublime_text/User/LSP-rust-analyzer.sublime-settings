@@ -1,0 +1,15 @@
+// Settings in here override those in "LSP-rust-analyzer/LSP-rust-analyzer.sublime-settings"
+
+{
+    "settings": {
+        "rust-analyzer.checkOnSave": false,
+        "rust-analyzer.cargo.autoreload": true,
+        "rust-analyzer.files.excludeDirs": [
+            "assets",
+            "debug",
+            "release",
+            "resources",
+            "target",
+        ],
+    }
+}
