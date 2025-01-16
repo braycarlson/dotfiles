@@ -2,9 +2,7 @@
 program = "cmd"
 args = [
     "/k",
-    "\"C:/Program Files (x86)/clink/clink.bat\" inject --quiet",
-    "&",
-    "E:/code/personal/incantation/aliases.bat"
+    "%APPDATA%/alacritty/aliases.bat"
 ]
 
 [window]
