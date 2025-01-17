@@ -49,6 +49,18 @@ vim.o.whichwrap = vim.o.whichwrap .. '<,>,h,l,[,]'
 -- Use the current line's indentation when starting a new line
 vim.opt.autoindent = true
 
+ -- Use spaces instead of tabs
+vim.bo.expandtab = false
+
+-- Set the width of a tab character
+vim.bo.tabstop = 4
+
+-- Set the indentation width for >> and <<
+vim.bo.shiftwidth = 4
+
+-- Make backspace delete as many spaces as a <Tab>
+vim.bo.softtabstop = 4
+
 -- Enable automatic C program indenting
 vim.opt.cindent = true
 

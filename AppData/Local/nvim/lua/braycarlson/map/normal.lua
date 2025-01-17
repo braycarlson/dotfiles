@@ -27,12 +27,28 @@ function trim_whitespace()
     vim.o.hlsearch = is_highlighted
 end
 
-vim.cmd([[
-    augroup trim_whitespace
-	autocmd!
-	autocmd BufWritePre * lua trim_whitespace()
-    augroup END
-]])
+ function convert_tabs_to_spaces()
+    local line = vim.fn.line('.')
+    local column = vim.fn.col('.')
+    local is_highlighted = vim.o.hlsearch
+
+    vim.o.hlsearch = false
+
+    vim.cmd([[silent! %s/\t/    /g]])
+
+    vim.fn.cursor(line, column)
+    vim.o.hlsearch = is_highlighted
+end
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*",
+    callback = trim_whitespace,
+})
+
+ vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*",
+    callback = convert_tabs_to_spaces,
+})
 
 vim.keymap.set(
     'x',

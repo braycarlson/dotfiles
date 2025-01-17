@@ -16,9 +16,7 @@ local bootstrap = get_packer()
 require('packer').startup(function(use)
     if vim.fn.has('nvim') == 1 then
         use 'wbthomason/packer.nvim'
-
         use 'andweeb/presence.nvim'
-
         use 'folke/zen-mode.nvim'
 
 	use {
@@ -42,7 +40,6 @@ require('packer').startup(function(use)
     }
 
     use 'junegunn/fzf.vim'
-
     use 'morhetz/gruvbox'
     use({ 'rose-pine/neovim', as = 'rose-pine' })
 
@@ -62,6 +59,18 @@ require('packer').startup(function(use)
             {'hrsh7th/cmp-nvim-lsp'},
             {'L3MON4D3/LuaSnip'},
         }
+    }
+
+    use {
+	'lukas-reineke/indent-blankline.nvim',
+	config = function()
+	    require('indent_blankline').setup {
+		char = '│',
+		show_trailing_blankline_indent = false,
+		show_current_context = true,
+		show_current_context_start = true,
+	    }
+	end
     }
 end)
 

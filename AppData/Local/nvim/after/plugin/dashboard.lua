@@ -8,10 +8,10 @@ dashboard.setup({
         },
         project = {
             enable = true,
-	    action = function(path)
-		vim.cmd('Files ' .. path)
+        action = function(path)
+        vim.cmd('Files ' .. path)
             end,
-	},
+    },
         shortcut = {
             {
                 desc = '󰊳 Update',
@@ -19,7 +19,7 @@ dashboard.setup({
                 action = 'PackerUpdate',
                 key = 'u'
             },
-	    {
+        {
                 icon = ' ',
                 icon_hl = '@variable',
                 desc = 'Personal',
@@ -27,7 +27,7 @@ dashboard.setup({
                 action = 'Files ' .. vim.g.personal,
                 key = 'p',
             },
-	    {
+        {
                 icon = ' ',
                 icon_hl = '@variable',
                 desc = 'Work',
@@ -35,10 +35,10 @@ dashboard.setup({
                 action = 'Files ' .. vim.g.work,
                 key = 'w',
             },
-	    {
+        {
                 desc = ' dotfile',
                 group = 'Number',
-                action = 'Files ' .. vim.g.home .. '/nvim',
+                action = 'Files ' .. vim.g.nvim,
                 key = 'd',
             },
         },

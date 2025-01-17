@@ -1,6 +1,6 @@
 local function build()
     local platform = os.getenv('OS')
-     
+
     local current = vim.fn.expand('%:p:h')
     local tex = vim.fn.expand('%:p')
     local pdf = vim.fn.expand('%:p:r') .. '.pdf'
@@ -14,11 +14,12 @@ local function build()
     vim.loop.spawn(
         vim.g.reader,
         {args = {pdf}},
+
         function(code)
             if code ~= 0 then
                 print('Failed to open PDF')
             else
-                if platform == 'Windows_NT' then
+                if vim.g.os == 'Windows' then
                     os.execute('del /S /Q ' .. current .. '\\*.aux')
                     os.execute('del /S /Q ' .. current .. '\\*.fls')
                     os.execute('del /S /Q ' .. current .. '\\*.fdb_latexmk')

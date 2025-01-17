@@ -71,7 +71,7 @@
         "poetry.lock",
         "pdm.lock",
         "*.sage.py"
-        ],
+  ],
 	"folder_exclude_patterns": [
         "/site",
         ".DS_Store",
@@ -133,13 +133,13 @@
         "wheels",
 
 		"personal/thesis/dataset/"
-        ],
+  ],
 	"font_face": "FiraCode Nerd Font",
 	"font_options": [
 	    "gray_antialias",
 	    "subpixel_antialias"
-        ],
-	"font_size": 20,
+  ],
+	"font_size": 19,
 	"highlight_modified_tabs": true,
 	"ignored_packages": [
 	    "Discord Rich Presence",
@@ -147,7 +147,7 @@
 		"Rust",
 		"SublimeCodeIntel",
 		"Vintage",
-        ],
+  ],
     "mini_diff": false,
 	"show_encoding": true,
 	"tab_size": 4,
@@ -155,7 +155,7 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": "all",
 	"tab_completion": false,
-	"update_check": true,
+	"update_check": false,
     "word_wrap": false,
 	"create_window_workspace": false,
 }
