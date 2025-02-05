@@ -16,7 +16,7 @@ dashboard.setup({
             {
                 desc = '󰊳 Update',
                 group = '@property',
-                action = 'PackerUpdate',
+                action = ':Lazy update',
                 key = 'u'
             },
         {

@@ -1,8 +1,9 @@
-require('braycarlson.packer')
-
 -- Default
 require('braycarlson.variable')
 require('braycarlson.set')
+
+-- Plugin manager
+require('braycarlson.lazy')
 
 -- Keymap
 require('braycarlson.map.command')
@@ -12,7 +13,7 @@ require('braycarlson.map.terminal')
 require('braycarlson.map.visual')
 
 -- Theme
-require('braycarlson.theme')
+require('braycarlson.colorscheme')
 
 -- Build system
 require('braycarlson.build.build')
