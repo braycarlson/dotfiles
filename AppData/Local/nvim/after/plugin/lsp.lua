@@ -77,10 +77,6 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
 
 lspconfig.ruff.setup({
-    init_options = {
-	settings = {}
-    },
-    filetypes = {'python'}
 })
 
 lsp.setup()

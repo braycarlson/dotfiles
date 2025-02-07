@@ -1,53 +1,14 @@
-function switch_to_previous_or_dashboard()
-    local current = vim.api.nvim_get_current_buf()
-    local previous = vim.fn.bufnr('#')
-
-    if previous == -1 or previous == 0 or current == previous then
-        vim.cmd('Dashboard')
-
-        vim.schedule(function()
-            vim.api.nvim_buf_delete(current, {force = true})
-        end)
-    else
-        vim.api.nvim_set_current_buf(previous)
-        vim.api.nvim_buf_delete(current, {force = true})
-    end
-end
-
-function trim_whitespace()
-    local line = vim.fn.line('.')
-    local column = vim.fn.col('.')
-    local is_highlighted = vim.o.hlsearch
-
-    vim.o.hlsearch = false
-
-    vim.cmd([[silent! %s/\s\+$//e]])
-
-    vim.fn.cursor(line, column)
-    vim.o.hlsearch = is_highlighted
-end
-
- function convert_tabs_to_spaces()
-    local line = vim.fn.line('.')
-    local column = vim.fn.col('.')
-    local is_highlighted = vim.o.hlsearch
-
-    vim.o.hlsearch = false
-
-    vim.cmd([[silent! %s/\t/    /g]])
-
-    vim.fn.cursor(line, column)
-    vim.o.hlsearch = is_highlighted
-end
+local buffer = require("braycarlson.buffer")
+local movement = require("braycarlson.movement")
 
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
-    callback = trim_whitespace,
+    callback = buffer.trim_whitespace,
 })
 
- vim.api.nvim_create_autocmd("BufWritePre", {
+vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
-    callback = convert_tabs_to_spaces,
+    callback = buffer.convert_tab_to_space,
 })
 
 vim.keymap.set(
@@ -295,9 +256,23 @@ vim.keymap.set(
     {}
 )
 
-vim.api.nvim_set_keymap(
+vim.keymap.set(
     'n',
     '<Leader>x',
-    ':lua switch_to_previous_or_dashboard()<CR>',
-    {noremap = true, silent = true}
+    buffer.switch_to_previous_or_dashboard,
+    { noremap = true, silent = true }
+)
+
+vim.keymap.set(
+    'n',
+    '<C-Right>',
+    movement.move_word_right,
+    { noremap = true, silent = true }
+)
+
+vim.keymap.set(
+    'n',
+    '<C-Left>',
+    movement.move_word_left,
+    { noremap = true, silent = true }
 )

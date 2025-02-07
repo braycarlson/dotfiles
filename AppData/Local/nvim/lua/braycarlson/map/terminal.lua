@@ -15,6 +15,6 @@ end
 vim.keymap.set(
     't',
     '<Esc>',
-    'v:lua.toggle_term()',
+    _G.toggle_term,
     { expr = true, silent = true }
 )

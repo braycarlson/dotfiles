@@ -12,8 +12,5 @@ require('braycarlson.map.normal')
 require('braycarlson.map.terminal')
 require('braycarlson.map.visual')
 
--- Theme
-require('braycarlson.colorscheme')
-
 -- Build system
 require('braycarlson.build.build')

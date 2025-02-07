@@ -48,27 +48,43 @@ function walk(path)
         return _G.environment.python, _G.environment.activate, _G.environment.parent
     end
 
+    local names = {
+        ".venv",
+        ".venv_win",
+        ".venv_windows",
+        ".venv_linux",
+        ".venv_mac",
+        ".venv_unix",
+        "venv",
+        "venv_win",
+        "venv_windows",
+        "venv_linux",
+        "venv_mac",
+        "venv_unix"
+    }
+
     while parent do
-        local activate
-        local python
+        for _, venv in ipairs(names) do
+            local activate, python
 
-        if vim.g.os == 'windows' then
-            activate = parent .. '/.venv/Scripts/activate.bat'
-            python = parent .. '/.venv/Scripts/python.exe'
-        else
-            activate = parent .. '/.venv/bin/activate'
-            python = parent .. '/.venv/bin/python'
+            if vim.g.os == "Windows" then
+                activate = parent .. '/' .. venv .. '/Scripts/activate.bat'
+                python = parent .. '/' .. venv .. '/Scripts/python.exe'
+            else
+                activate = parent .. '/' .. venv .. '/bin/activate'
+                python = parent .. '/' .. venv .. '/bin/python'
+            end
+
+            if vim.loop.fs_stat(python) then
+                print('Activating: ' .. python)
+                _G.environment.activate = activate
+                _G.environment.parent = parent
+                _G.environment.python = python
+                return python, activate, parent
+            end
         end
 
-        if vim.loop.fs_stat(python) then
-            print('Activating: ' .. python)
-            _G.environment.activate = activate
-            _G.environment.parent = parent
-            _G.environment.python = python
-            return python, activate, parent
-        end
-
-        local root = vim.fn.fnamemodify(parent, ':h')
+        local root = vim.fn.fnamemodify(parent, ":h")
 
         if root == parent then
             break

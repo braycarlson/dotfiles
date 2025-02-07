@@ -30,5 +30,3 @@ local function set_bufferline_tab_text()
 end
 
 set_bufferline_tab_text()
-
-

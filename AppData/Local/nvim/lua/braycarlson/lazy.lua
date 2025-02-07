@@ -54,35 +54,35 @@ require("lazy").setup({
     { "junegunn/fzf.vim" },
 
     -- Colorschemes
-    {
-        "morhetz/gruvbox",
-        lazy = false,
-        priority = 1000,
-        config = function()
-        vim.g.gruvbox_bold = 0
-        vim.g.gruvbox_italic = 0
-        vim.g.gruvbox_italicize_comments = 0
-        vim.g.gruvbox_italicize_strings = 0
-        vim.g.gruvbox_contrast_dark = "medium"
-            vim.opt.termguicolors = true
-            vim.cmd("colorscheme gruvbox")
-        end,
-    },
-
     -- {
-    --     "rose-pine/neovim",
-    --     name = "rose-pine",
+    --     "morhetz/gruvbox",
     --     lazy = false,
     --     priority = 1000,
     --     config = function()
-    --         require("rose-pine").setup({
-    --             variant = "main",
-    --             disable_italics = true,
-    --         })
+    --         vim.g.gruvbox_bold = 0
+    --         vim.g.gruvbox_italic = 0
+    --         vim.g.gruvbox_italicize_comments = 0
+    --         vim.g.gruvbox_italicize_strings = 0
+    --         vim.g.gruvbox_contrast_dark = "medium"
     --         vim.opt.termguicolors = true
-    --         vim.cmd("colorscheme rose-pine")
+    --         vim.cmd("colorscheme gruvbox")
     --     end,
     -- },
+
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require("rose-pine").setup({
+                variant = "main",
+                disable_italics = true,
+            })
+            vim.opt.termguicolors = true
+            vim.cmd("colorscheme rose-pine")
+        end,
+    },
 
     -- LSP and Autocompletion
     {
