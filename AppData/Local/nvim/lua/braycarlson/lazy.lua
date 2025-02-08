@@ -19,6 +19,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    -- nvim-qt/ginit.lua
+    { "equalsraf/neovim-gui-shim" },
+
     -- General Plugins
     { "andweeb/presence.nvim" },
     { "folke/zen-mode.nvim" },
