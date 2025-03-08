@@ -1,0 +1,45 @@
+{
+    "command": ["${node_bin}", "${server_path}", "--stdio"],
+    "schemes": [
+        "file",
+        "buffer",
+        "res",
+    ],
+    "disabled_capabilities": {
+        "semanticTokensProvider": false,
+        "inlayHintProvider": false,
+    },
+    "settings": {
+        "statusText": "{% set parts = [] %}{% if server_version %}{% do parts.append('v' + server_version) %}{% endif %}{% if venv %}{% do parts.append('venv: ' + venv.venv_prompt) %}{% do parts.append('py: ' + venv.python_version) %}{% do parts.append('by: ' + venv.finder_name) %}{% endif %}{{ parts|join('; ') }}",
+        "venvStrategies": [
+            "local_dot_venv",
+            "any_subdirectory",
+        ],
+        "basedpyright.dev_environment": "",
+        "basedpyright.dev_environment_blender.binary": "blender",
+        "basedpyright.dev_environment_gdb.binary": "gdb",
+        "basedpyright.analysis.autoImportCompletions": true,
+        "basedpyright.analysis.autoSearchPaths": true,
+        "basedpyright.analysis.extraPaths": [],
+        "basedpyright.analysis.diagnosticMode": "openFilesOnly",
+        "basedpyright.analysis.diagnosticSeverityOverrides": {
+            "reportMissingImports": "none",
+            "reportAttributeAccessIssue": "none",
+            "reportArgumentType": "none",
+            "reportReturnType": "none",
+            "reportCallIssue": "none",
+            "reportOperatorIssue": "none",
+            "reportOptionalMemberAccess": "none",
+            "reportGeneralTypeIssues": "none"
+        },
+        "basedpyright.analysis.logLevel": "Information",
+        "basedpyright.analysis.typeCheckingMode": "basic",
+        "basedpyright.analysis.typeshedPaths": [],
+        "basedpyright.analysis.useLibraryCodeForTypes": true,
+        "basedpyright.disableLanguageServices": false,
+        "basedpyright.disableOrganizeImports": false,
+        "python.pythonPath": "",
+        "python.venvPath": "C:/Users/BraydenCarlson/Documents/code/work/tradesman-mfg/.venv_win",
+    },
+    "selector": "source.python",
+}
