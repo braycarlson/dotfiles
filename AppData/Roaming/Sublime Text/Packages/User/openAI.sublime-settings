@@ -1,0 +1,15 @@
+{
+    "debug": true,
+    "assistants": [
+        {
+            "name": "DeepSeek Local",
+            "url": "http://127.0.0.1:11434/v1/chat/completions",
+            "token": "dummy",
+            "chat_model": "deepseek-coder:6.7b",
+            "assistant_role": "You are a code assistant",
+            "temperature": 0.1,
+            "max_tokens": 2000,
+            "api_type": "plain_text"
+        }
+    ]
+}

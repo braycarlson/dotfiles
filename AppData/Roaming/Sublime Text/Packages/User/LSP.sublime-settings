@@ -8,6 +8,11 @@
     "show_diagnostics_severity_level": 3,
     "diagnostics_panel_include_severity_level": 3,
     "clients": {
+        "postgres-language-server": {
+            "enabled": true,
+            "command": ["C:/Program Files/postgrestools/postgrestools.exe", "lsp-proxy"],
+            "selector": "source.sql"
+        },
         "slint": {
             "command": [
                 "C:/Users/Brayden/.cargo/bin/slint-lsp.exe"
@@ -20,6 +25,11 @@
                 "Packages/User/Slint.sublime-syntax"
             ],
             "enabled": true
-        }
+        },
+        "zig": {
+          "enabled": true,
+          "command": ["zls"],
+          "selector": "source.zig",
+      }
     }
 }

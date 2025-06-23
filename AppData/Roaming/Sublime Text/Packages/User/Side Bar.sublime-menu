@@ -1,0 +1,7 @@
+[
+    {
+        "caption": "swarm",
+        "command": "swarm",
+        "args": { "paths": [] }
+    }
+]

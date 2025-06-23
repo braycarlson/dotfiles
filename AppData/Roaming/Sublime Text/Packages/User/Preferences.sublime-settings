@@ -1,7 +1,7 @@
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-	"color_scheme": "Rosé Pine Moon.sublime-color-scheme",
+	"color_scheme": "Gruvbox Material Dark.sublime-color-scheme",
 	"detect_indentation": false,
 	"drag_text": false,
 	"dictionary": "Packages/Language - English/en_US.dic",
@@ -26,7 +26,6 @@
         "*.jpeg",
         "*.jpg",
         "*.lib",
-        "*.log",
         "*.manifest",
         "*.mo",
         "*.ncb",
@@ -76,7 +75,6 @@
         "/site",
         ".DS_Store",
         ".eggs",
-        ".git",
         ".hg",
         ".hypothesis",
         ".idea",
@@ -111,7 +109,6 @@
         "profile_default",
         "sdist",
         "share/python-wheels",
-        "target",
         "tmp/cache",
         "var",
         ".venv",
@@ -128,21 +125,25 @@
 	    "gray_antialias",
 	    "subpixel_antialias"
   ],
-	"font_size": 18,
+	"font_size": 19,
 	"highlight_modified_tabs": true,
 	"ignored_packages": [
-	    "Discord Rich Presence",
-		"Rust",
+	    "Rust",
 		"Vintage",
   ],
     "mini_diff": false,
 	"show_encoding": true,
 	"tab_size": 4,
-	"theme": "Rosé Pine Moon.sublime-theme",
+	"theme": "Gruvbox Material Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": "all",
 	"tab_completion": false,
-	"update_check": false,
+	"update_check": true,
     "word_wrap": false,
 	"create_window_workspace": false,
+  "added_words":
+  [
+		"Biogeography",
+    "Stratigraphy",
+  ],
 }

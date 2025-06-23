@@ -1,0 +1,46 @@
+{
+    "selector": "source.sql",
+    "cancel": {"kill": true},
+    "variants": [
+        {
+            "name": "Format",
+            "cmd": [
+                "pg_format",
+                "-g",
+                // -u 2 : uppercase keywords (SELECT, FROM, WHERE, CASE, etc.)
+                "-u", "2",
+                // -f 1 : lowercase functions (json_build_array, json_build_object, etc.)
+                "-f", "2",
+                // -U 1 : lowercase data types (varchar, integer, etc.)
+                "-U", "2",
+                // -s 4 : use 4 spaces for indentation (matches your example)
+                "-s", "4",
+                // -B : add newline after each comma in INSERT statements
+                "-B",
+                // -k : preserve empty lines in PL/pgSQL code
+                "-k",
+                // -i : modify file in place
+                "-i",
+                "$file"
+            ],
+            "shell": true,
+            "selector": "source.sql",
+            "cancel": {"kill": true}
+        },
+        {
+            "name": "Format to Console",
+            "cmd": ["pg_format", "$file"],
+            "shell": true
+        },
+        {
+            "name": "Format to New File",
+            "cmd": ["cmd", "/c", "pg_format \"$file\" > \"${file_path}/${file_base_name}_formatted.sql\""],
+            "shell": true
+        },
+        {
+            "name": "Format with Uppercase Keywords",
+            "cmd": ["pg_format", "-f", "2", "-k", "2", "-i", "$file"],
+            "shell": true
+        }
+    ]
+}

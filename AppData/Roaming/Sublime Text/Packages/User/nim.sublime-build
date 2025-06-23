@@ -1,6 +1,6 @@
 {
-    "target": "python",
-    "selector": "source.py",
+    "target": "nim",
+    "selector": "source.nim",
     "cancel": {"kill": true},
     "variants": [
         {
@@ -14,11 +14,6 @@
         {
             "name": "Command Prompt",
             "shell": "commandprompt",
-        },
-        {
-            "name": "Manim",
-            "project": "manim",
-            "shell": null
         }
     ]
 }

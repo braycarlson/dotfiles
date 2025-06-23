@@ -12,7 +12,6 @@ doskey mkdir=md $*
 doskey rmdir=rd $*
 
 REM Searching and file content viewing
-doskey grep=findstr $*
 doskey cat=type $*
 doskey less=more $*
 

@@ -1,23 +1,22 @@
 require("mason").setup()
-require("mason-lspconfig").setup()
-
-local lsp = require('lsp-zero')
-local lspconfig = require('lspconfig')
-
-lsp.preset('recommended')
-
-lsp.ensure_installed({
-    'cssls',
-    'gopls',
-    'html',
-    'jinja_lsp',
-    'jsonls',
-    'lua_ls',
-    'ruff',
-    'rust_analyzer',
-    'sqls',
-    'ts_ls'
+require("mason-lspconfig").setup({
+    ensure_installed = {
+        'cssls',
+        'gopls',
+        'html',
+        'jinja_lsp',
+        'jsonls',
+        'lua_ls',
+        'ruff',
+        'rust_analyzer',
+        'sqls',
+        -- 'tsserver'
+    },
+    automatic_installation = true,
 })
+
+local lsp = require('lsp-zero').preset('recommended')
+local lspconfig = require('lspconfig')
 
 lsp.nvim_workspace()
 
@@ -76,7 +75,6 @@ end)
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
 
-lspconfig.ruff.setup({
-})
+lspconfig.ruff.setup({})
 
 lsp.setup()
